@@ -10,6 +10,7 @@ export default function useQuestions(dispatch) {
           dispatch({ type: "fetchedData", payload: data });
         } catch (err) {
           console.log(err);
+          dispatch({ type: "fetchDataFailed" });
         }
       }
 
